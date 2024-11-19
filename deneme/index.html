@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Türkiye Orman Haritası</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Leaflet Awesome Markers CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.css">
+  <!-- Leaflet Awesome Markers JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.js"></script>
+</head>
+<body>
+<div class="dashboard">
+  <!-- Harita Bölümü -->
+  <div class="map-section">
+    <h2>Türkiye Orman Haritası</h2>
+    <p>Türkiye’nin farklı bölgelerindeki ormanları keşfetmek için aşağıdaki haritayı kullanın.</p>
+    <div id="map"></div>
+  </div>
+
+  <!-- Bilgi Paneli -->
+  <div class="info-panel">
+    <h2>Bilgi Paneli</h2>
+    <div id="info-content">
+      <p><strong>Türkiye’nin farklı bölgelerindeki ormanlar hakkında bilgi almak için haritada bir bölge seçin.</strong></p>
+      <ul>
+        <li>Haritadan bir bölge seçmek için üzerine tıklayın.</li>
+        <li>Seçtiğiniz bölgedeki ormanlar hakkında detaylı bilgileri burada görüntüleyin.</li>
+      </ul>
+      <p>Ormanlar hakkında bilgi edindikten sonra, hangi ağaç türlerinin bulunduğunu öğrenebilirsiniz.</p>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
