@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const map = L.map('map').setView([39.92077, 32.85411], 6);
+    const map = L.map('map').setView([36.92077, 33.85411], 5.4);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
@@ -19,39 +19,39 @@ document.addEventListener('DOMContentLoaded', () => {
     // Orman verileri
     const forests = {
         'Marmara': [
-            { name: 'Kaz Dağları Ormanı', lat: 39.678, lng: 26.747, area: 20792 },
-            { name: 'Belgrad Ormanı', lat: 41.184, lng: 28.914, area: 5442 },
-            { name: 'İğneada Longoz Ormanları', lat: 41.883, lng: 27.986, area: 3155 }
+            { name: 'Belgrad Ormanı', lat: 41.184, lng: 28.914 },
+            { name: 'Kaz Dağları Ormanı', lat: 39.678, lng: 26.747 },
+            { name: 'İğneada Longoz Ormanları', lat: 41.883, lng: 27.986 }
         ],
         'Ege': [
-            { name: 'Bozdağ Ormanları', lat: 38.262, lng: 28.117, area: 12500 },
-            { name: 'Spil Dağı Milli Parkı', lat: 38.585, lng: 27.426, area: 6800 }
+            { name: 'Spil Dağı Milli Parkı', lat: 38.585, lng: 27.426 },
+            { name: 'Bozdağ Ormanları', lat: 38.262, lng: 28.117 }
         ],
         'Akdeniz': [
-            { name: 'Toros Dağları Ormanları', lat: 37.028, lng: 32.404, area: 17000 },
-            { name: 'Beydağları Milli Parkı', lat: 36.830, lng: 30.589, area: 15000 },
-            { name: 'Köprülü Kanyon Ormanları', lat: 37.224, lng: 31.240, area: 9250 },
-            { name: 'Termessos Milli Parkı', lat: 36.991, lng: 30.506, area: 6800 }
+            { name: 'Termessos Milli Parkı', lat: 36.991, lng: 30.506 },
+            { name: 'Beydağları Milli Parkı', lat: 36.830, lng: 30.589 },
+            { name: 'Toros Dağları Ormanları', lat: 37.028, lng: 32.404 },
+            { name: 'Köprülü Kanyon Ormanları', lat: 37.224, lng: 31.240 }
         ],
         'İç Anadolu': [
-            { name: 'Bolkar Dağları Ormanları', lat: 37.280, lng: 34.526, area: 12500 },
-            { name: 'Türkmen Dağı Ormanları', lat: 38.706, lng: 31.927, area: 8600 },
-            { name: 'Sündiken Ormanları', lat: 39.784, lng: 31.140, area: 5400 }
+            { name: 'Sündiken Ormanları', lat: 39.784, lng: 31.140 },
+            { name: 'Türkmen Dağı Ormanları', lat: 38.706, lng: 31.927 },
+            { name: 'Bolkar Dağları Ormanları', lat: 37.280, lng: 34.526 }
         ],
         'Karadeniz': [
-            { name: 'Kaçkar Dağları Ormanları', lat: 40.910, lng: 41.235, area: 20000 },
-            { name: 'Küre Dağları Milli Parkı', lat: 41.837, lng: 33.476, area: 13800 },
-            { name: 'Yedigöller Milli Parkı', lat: 40.937, lng: 31.735, area: 6800 }
+            { name: 'Küre Dağları Milli Parkı', lat: 41.837, lng: 33.476 },
+            { name: 'Kaçkar Dağları Ormanları', lat: 40.910, lng: 41.235 },
+            { name: 'Yedigöller Milli Parkı', lat: 40.937, lng: 31.735 }
         ],
         'Doğu Anadolu': [
-            { name: 'Munzur Dağları Ormanları', lat: 39.084, lng: 39.537, area: 18500 },
-            { name: 'Bingöl Dağları Ormanları', lat: 39.042, lng: 40.591, area: 12500 },
-            { name: 'Palandöken Dağları Ormanları', lat: 39.888, lng: 41.278, area: 7200 }
+            { name: 'Munzur Dağları Ormanları', lat: 39.084, lng: 39.537 },
+            { name: 'Bingöl Dağları Ormanları', lat: 39.042, lng: 40.591 },
+            { name: 'Palandöken Dağları Ormanları', lat: 39.888, lng: 41.278 }
         ],
         'Güneydoğu Anadolu': [
-            { name: 'Karacadağ Ormanları', lat: 37.472, lng: 39.797, area: 9500 },
-            { name: 'Dicle Ormanları', lat: 37.914, lng: 40.240, area: 7200 },
-            { name: 'Birecik Ormanları', lat: 37.034, lng: 37.978, area: 5400 }
+            { name: 'Dicle Ormanları', lat: 37.914, lng: 40.240 },
+            { name: 'Birecik Ormanları', lat: 37.034, lng: 37.978 },
+            { name: 'Karacadağ Ormanları', lat: 37.472, lng: 39.797 }
         ]
     };
 
