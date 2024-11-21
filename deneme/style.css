@@ -55,7 +55,7 @@ body {
 
 #map {
     width: 100%;
-    height: 550px;
+    height: calc(100vh - 250px);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -114,4 +114,99 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* General Container for the Search Bar */
+.search-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures proper alignment if space is constrained */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Adds consistent spacing between elements */
+    margin-bottom: 20px;
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    flex: 1; /* Makes the input grow to fill available space */
+    max-width: 400px; /* Set a max width for better alignment */
+}
+
+.input-group-text {
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    flex-grow: 1; /* Makes the input fill available space */
+}
+
+/* Dropdown Styling */
+.form-select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevents the dropdown from shrinking */
+    width: 200px; /* Consistent width for dropdown */
+}
+
+/* Search Button Styling */
+.btn-primary {
+    background-color: #a0522d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+.btn-primary:hover {
+    background-color: #8b4513;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    background-color: #7a3911;
+    transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* Stacks elements on smaller screens */
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .form-select,
+    .btn-primary {
+        width: 100%; /* Full width for dropdown and button */
+    }
+
+    .input-group {
+        width: 100%; /* Full width for the search bar */
+    }
 }

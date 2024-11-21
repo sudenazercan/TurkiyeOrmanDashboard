@@ -19,190 +19,379 @@ document.addEventListener('DOMContentLoaded', () => {
     // Orman verileri
     const forests = {
         'Marmara': [
-            { name: 'Belgrad Ormanı', lat: 41.184, lng: 28.914 },
-            { name: 'Kaz Dağları Ormanı', lat: 39.678, lng: 26.747 },
-            { name: 'İğneada Longoz Ormanları', lat: 41.883, lng: 27.986 }
+            {
+                name: 'Belgrad Ormanı',
+                lat: 41.184,
+                lng: 28.914,
+                totalTrees: 150000,
+                markedTrees: 50000,
+                toBeMarkedTrees: 30000,
+                toBeCutTrees: 10000,
+                nonCuttableTrees: 110000
+            },
+            {
+                name: 'Kaz Dağları Ormanı',
+                lat: 39.678,
+                lng: 26.747,
+                totalTrees: 200000,
+                markedTrees: 80000,
+                toBeMarkedTrees: 40000,
+                toBeCutTrees: 20000,
+                nonCuttableTrees: 160000
+            },
+            {
+                name: 'İğneada Longoz Ormanları',
+                lat: 41.883,
+                lng: 27.986,
+                totalTrees: 180000,
+                markedTrees: 70000,
+                toBeMarkedTrees: 35000,
+                toBeCutTrees: 15000,
+                nonCuttableTrees: 140000
+            }
         ],
         'Ege': [
-            { name: 'Spil Dağı Milli Parkı', lat: 38.585, lng: 27.426 },
-            { name: 'Bozdağ Ormanları', lat: 38.262, lng: 28.117 }
+            {
+                name: 'Spil Dağı Milli Parkı',
+                lat: 38.585,
+                lng: 27.426,
+                totalTrees: 100000,
+                markedTrees: 30000,
+                toBeMarkedTrees: 20000,
+                toBeCutTrees: 5000,
+                nonCuttableTrees: 85000
+            },
+            {
+                name: 'Bozdağ Ormanları',
+                lat: 38.262,
+                lng: 28.117,
+                totalTrees: 90000,
+                markedTrees: 25000,
+                toBeMarkedTrees: 15000,
+                toBeCutTrees: 7000,
+                nonCuttableTrees: 78000
+            }
         ],
         'Akdeniz': [
-            { name: 'Termessos Milli Parkı', lat: 36.991, lng: 30.506 },
-            { name: 'Beydağları Milli Parkı', lat: 36.830, lng: 30.589 },
-            { name: 'Toros Dağları Ormanları', lat: 37.028, lng: 32.404 },
-            { name: 'Köprülü Kanyon Ormanları', lat: 37.224, lng: 31.240 }
+            {
+                name: 'Termessos Milli Parkı',
+                lat: 36.991,
+                lng: 30.506,
+                totalTrees: 120000,
+                markedTrees: 40000,
+                toBeMarkedTrees: 25000,
+                toBeCutTrees: 8000,
+                nonCuttableTrees: 104000
+            },
+            {
+                name: 'Beydağları Milli Parkı',
+                lat: 36.830,
+                lng: 30.589,
+                totalTrees: 150000,
+                markedTrees: 50000,
+                toBeMarkedTrees: 30000,
+                toBeCutTrees: 10000,
+                nonCuttableTrees: 120000
+            },
+            {
+                name: 'Toros Dağları Ormanları',
+                lat: 37.028,
+                lng: 32.404,
+                totalTrees: 200000,
+                markedTrees: 70000,
+                toBeMarkedTrees: 40000,
+                toBeCutTrees: 15000,
+                nonCuttableTrees: 175000
+            },
+            {
+                name: 'Köprülü Kanyon Ormanları',
+                lat: 37.224,
+                lng: 31.240,
+                totalTrees: 90000,
+                markedTrees: 30000,
+                toBeMarkedTrees: 20000,
+                toBeCutTrees: 6000,
+                nonCuttableTrees: 84000
+            }
         ],
         'İç Anadolu': [
-            { name: 'Sündiken Ormanları', lat: 39.784, lng: 31.140 },
-            { name: 'Türkmen Dağı Ormanları', lat: 38.706, lng: 31.927 },
-            { name: 'Bolkar Dağları Ormanları', lat: 37.280, lng: 34.526 }
+            {
+                name: 'Sündiken Ormanları',
+                lat: 39.784,
+                lng: 31.140,
+                totalTrees: 75000,
+                markedTrees: 20000,
+                toBeMarkedTrees: 15000,
+                toBeCutTrees: 5000,
+                nonCuttableTrees: 70000
+            },
+            {
+                name: 'Türkmen Dağı Ormanları',
+                lat: 38.706,
+                lng: 31.927,
+                totalTrees: 85000,
+                markedTrees: 30000,
+                toBeMarkedTrees: 20000,
+                toBeCutTrees: 7000,
+                nonCuttableTrees: 78000
+            },
+            {
+                name: 'Bolkar Dağları Ormanları',
+                lat: 37.280,
+                lng: 34.526,
+                totalTrees: 60000,
+                markedTrees: 15000,
+                toBeMarkedTrees: 10000,
+                toBeCutTrees: 4000,
+                nonCuttableTrees: 56000
+            }
         ],
         'Karadeniz': [
-            { name: 'Küre Dağları Milli Parkı', lat: 41.837, lng: 33.476 },
-            { name: 'Kaçkar Dağları Ormanları', lat: 40.910, lng: 41.235 },
-            { name: 'Yedigöller Milli Parkı', lat: 40.937, lng: 31.735 }
+            {
+                name: 'Küre Dağları Milli Parkı',
+                lat: 41.837,
+                lng: 33.476,
+                totalTrees: 220000,
+                markedTrees: 80000,
+                toBeMarkedTrees: 40000,
+                toBeCutTrees: 20000,
+                nonCuttableTrees: 200000
+            },
+            {
+                name: 'Kaçkar Dağları Ormanları',
+                lat: 40.910,
+                lng: 41.235,
+                totalTrees: 250000,
+                markedTrees: 100000,
+                toBeMarkedTrees: 50000,
+                toBeCutTrees: 30000,
+                nonCuttableTrees: 220000
+            },
+            {
+                name: 'Yedigöller Milli Parkı',
+                lat: 40.937,
+                lng: 31.735,
+                totalTrees: 150000,
+                markedTrees: 60000,
+                toBeMarkedTrees: 30000,
+                toBeCutTrees: 15000,
+                nonCuttableTrees: 135000
+            }
         ],
         'Doğu Anadolu': [
-            { name: 'Munzur Dağları Ormanları', lat: 39.084, lng: 39.537 },
-            { name: 'Bingöl Dağları Ormanları', lat: 39.042, lng: 40.591 },
-            { name: 'Palandöken Dağları Ormanları', lat: 39.888, lng: 41.278 }
+            {
+                name: 'Munzur Dağları Ormanları',
+                lat: 39.084,
+                lng: 39.537,
+                totalTrees: 100000,
+                markedTrees: 35000,
+                toBeMarkedTrees: 20000,
+                toBeCutTrees: 8000,
+                nonCuttableTrees: 92000
+            },
+            {
+                name: 'Bingöl Dağları Ormanları',
+                lat: 39.042,
+                lng: 40.591,
+                totalTrees: 120000,
+                markedTrees: 40000,
+                toBeMarkedTrees: 25000,
+                toBeCutTrees: 9000,
+                nonCuttableTrees: 111000
+            },
+            {
+                name: 'Palandöken Dağları Ormanları',
+                lat: 39.888,
+                lng: 41.278,
+                totalTrees: 80000,
+                markedTrees: 30000,
+                toBeMarkedTrees: 15000,
+                toBeCutTrees: 7000,
+                nonCuttableTrees: 73000
+            }
         ],
         'Güneydoğu Anadolu': [
-            { name: 'Dicle Ormanları', lat: 37.914, lng: 40.240 },
-            { name: 'Birecik Ormanları', lat: 37.034, lng: 37.978 },
-            { name: 'Karacadağ Ormanları', lat: 37.472, lng: 39.797 }
+            {
+                name: 'Dicle Ormanları',
+                lat: 37.914,
+                lng: 40.240,
+                totalTrees: 50000,
+                markedTrees: 15000,
+                toBeMarkedTrees: 10000,
+                toBeCutTrees: 4000,
+                nonCuttableTrees: 46000
+            },
+            {
+                name: 'Birecik Ormanları',
+                lat: 37.034,
+                lng: 37.978,
+                totalTrees: 70000,
+                markedTrees: 20000,
+                toBeMarkedTrees: 15000,
+                toBeCutTrees: 5000,
+                nonCuttableTrees: 65000
+            },
+            {
+                name: 'Karacadağ Ormanları',
+                lat: 37.472,
+                lng: 39.797,
+                totalTrees: 60000,
+                markedTrees: 18000,
+                toBeMarkedTrees: 12000,
+                toBeCutTrees: 4000,
+                nonCuttableTrees: 56000
+            }
         ]
     };
 
     const trees = {
         'Belgrad Ormanı': [
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 41.185, lng: 28.910 },
-            { name: 'Kayın', kesilebilir: 'Hayır', yas: '150-200 yıl', lat: 41.186, lng: 28.906 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 41.188, lng: 28.888 },
-            { name: 'Çınar', kesilebilir: 'Evet', yas: '200-300 yıl', lat: 41.187, lng: 28.902 },
-            { name: 'Kestane', kesilebilir: 'Hayır', yas: '100-150 yıl', lat: 41.189, lng: 28.884 }
+            { name: 'Meşe', totalTrees: 3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.185, lng: 28.910 },
+            { name: 'Kayın', totalTrees: 3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.186, lng: 28.906 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.188, lng: 28.888 },
+            { name: 'Çınar', totalTrees:3000, markedTrees: 1500, ytoBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.187, lng: 28.902 },
+            { name: 'Kestane', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.189, lng: 28.884 }
         ],
         'Kaz Dağları Ormanı': [
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 39.679, lng: 26.743 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 39.680, lng: 26.739 },
-            { name: 'Kazdağı Göknarı', kesilebilir: 'Hayır', yas: '200-300 yıl', lat: 39.681, lng: 26.735 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 39.682, lng: 26.731 },
-            { name: 'Çınar', kesilebilir: 'Hayır', yas: '200-300 yıl', lat: 39.683, lng: 26.727 }
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.679, lng: 26.743 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.680, lng: 26.739 },
+            { name: 'Kazdağı Göknarı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.681, lng: 26.735 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.682, lng: 26.731 },
+            { name: 'Çınar', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.683, lng: 26.727 }
         ],
         'İğneada Longoz Ormanları': [
-            { name: 'Dişbudak', kesilebilir: 'Hayır', yas: '80-150 yıl', lat: 41.884, lng: 27.982 },
-            { name: 'Kızılağaç', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 41.885, lng: 27.978 },
-            { name: 'Söğüt', kesilebilir: 'Evet', yas: '30-70 yıl', lat: 41.886, lng: 27.974 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 41.887, lng: 27.970 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 41.888, lng: 27.966 }
+            { name: 'Dişbudak', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.884, lng: 27.982 },
+            { name: 'Kızılağaç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.885, lng: 27.978 },
+            { name: 'Söğüt', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.886, lng: 27.974 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.887, lng: 27.970 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.888, lng: 27.966 }
         ],
         'Spil Dağı Milli Parkı': [
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 38.586, lng: 27.422 },
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 38.587, lng: 27.418 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 38.588, lng: 27.414 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 38.589, lng: 27.410 }
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.586, lng: 27.422 },
+            { name: 'Kızılçam', totalTrees:3000,markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.587, lng: 27.418 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.588, lng: 27.414 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.589, lng: 27.410 }
         ],
         'Bozdağ Ormanları': [
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 38.263, lng: 28.113 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 38.264, lng: 28.109 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 38.265, lng: 28.105 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 38.266, lng: 28.101 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 38.267, lng: 28.097 }
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.263, lng: 28.113 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.264, lng: 28.109 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.265, lng: 28.105 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.266, lng: 28.101 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.267, lng: 28.097 }
         ],
         'Termessos Milli Parkı': [
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 36.992, lng: 30.502 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 36.993, lng: 30.488 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 36.984, lng: 30.484 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 36.995, lng: 30.480 }
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.992, lng: 30.502 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.993, lng: 30.488 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.984, lng: 30.484 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.995, lng: 30.480 }
         ],
         'Beydağları Milli Parkı': [
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 36.831, lng: 30.585 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 36.532, lng: 30.581 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 36.533, lng: 30.577 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 36.534, lng: 30.573 }
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.831, lng: 30.585 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.532, lng: 30.581 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.533, lng: 30.577 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 36.534, lng: 30.573 }
         ],
         'Toros Dağları Ormanları': [
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 37.029, lng: 32.400 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 37.030, lng: 32.336 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 37.031, lng: 32.332 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 37.032, lng: 32.328 },
-            { name: 'Fıstık Çamı', kesilebilir: 'Hayır', yas: '80-150 yıl', lat: 37.033, lng: 32.324 }
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.029, lng: 32.400 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.030, lng: 32.336 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.031, lng: 32.332 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.032, lng: 32.328 },
+            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.033, lng: 32.324 }
         ],
         'Köprülü Kanyon Ormanları': [
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 37.225, lng: 31.236 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 37.226, lng: 31.232 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 37.227, lng: 31.228 },
-            { name: 'Akasya', kesilebilir: 'Evet', yas: '30-50 yıl', lat: 37.228, lng: 31.224 },
-            { name: 'Zeytin', kesilebilir: 'Hayır', yas: '200-500 yıl', lat: 37.229, lng: 31.220 }
+            { name: 'Kızılçam', totalTrees:3000, kesilebilir: 'Evet', toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.225, lng: 31.236 },
+            { name: 'Sedir', totalTrees:3000, kesilebilir: 'Hayır', toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.226, lng: 31.232 },
+            { name: 'Meşe', totalTrees:3000, kesilebilir: 'Evet', toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.227, lng: 31.228 },
+            { name: 'Akasya', totalTrees:3000, kesilebilir: 'Evet', toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.228, lng: 31.224 },
+            { name: 'Zeytin', totalTrees:3000, kesilebilir: 'Hayır', toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.229, lng: 31.220 }
         ],
         'Sündiken Ormanları': [
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 39.785, lng: 31.136 },
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 39.786, lng: 31.132 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 39.787, lng: 31.128 },
-            { name: 'Akasya', kesilebilir: 'Evet', yas: '30-50 yıl', lat: 39.788, lng: 31.124 },
-            { name: 'Fıstık Çamı', kesilebilir: 'Hayır', yas: '80-150 yıl', lat: 39.789, lng: 31.120 }
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.785, lng: 31.136 },
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.786, lng: 31.132 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.787, lng: 31.128 },
+            { name: 'Akasya', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.788, lng: 31.124 },
+            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.789, lng: 31.120 }
         ],
         'Türkmen Dağı Ormanları': [
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 38.707, lng: 31.923 },
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 38.708, lng: 31.919 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 38.709, lng: 31.915 },
-            { name: 'Ardıç', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 38.710, lng: 31.914 }
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.707, lng: 31.923 },
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.708, lng: 31.919 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.709, lng: 31.915 },
+            { name: 'Ardıç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.710, lng: 31.914 }
         ],
         'Bolkar Dağları Ormanları': [
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 37.281, lng: 34.522 },
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 37.282, lng: 34.518 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 37.283, lng: 34.514 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 37.284, lng: 34.510 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 37.285, lng: 34.506 }
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.281, lng: 34.522 },
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.282, lng: 34.518 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.283, lng: 34.514 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.284, lng: 34.510 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.285, lng: 34.506 }
         ],
         'Küre Dağları Milli Parkı': [
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 41.838, lng: 33.472 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 41.839, lng: 33.468 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 41.840, lng: 33.464 },
-            { name: 'Ladin', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 41.841, lng: 33.460 },
-            { name: 'Fıstık Çamı', kesilebilir: 'Hayır', yas: '80-150 yıl', lat: 41.842, lng: 33.456 }
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.838, lng: 33.472 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.839, lng: 33.468 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.840, lng: 33.464 },
+            { name: 'Ladin', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.841, lng: 33.460 },
+            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.842, lng: 33.456 }
         ],
         'Kaçkar Dağları Ormanları': [
-            { name: 'Ladin', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 40.911, lng: 41.231 },
-            { name: 'Sarıçam', kesilebilir: 'Evet', yas: '100-200 yıl', lat: 40.912, lng: 41.227 },
-            { name: 'Göknar', kesilebilir: 'Hayır', yas: '200-400 yıl', lat: 40.913, lng: 41.223 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 40.914, lng: 41.219 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 40.915, lng: 41.215 },
-            { name: 'Kayın', kesilebilir: 'Hayır', yas: '150-200 yıl', lat: 40.916, lng: 41.211 }
+            { name: 'Ladin', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.911, lng: 41.231 },
+            { name: 'Sarıçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.912, lng: 41.227 },
+            { name: 'Göknar', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.913, lng: 41.223 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.914, lng: 41.219 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.915, lng: 41.215 },
+            { name: 'Kayın', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.916, lng: 41.211 }
         ],
         'Yedigöller Milli Parkı': [
-            { name: 'Kayın', kesilebilir: 'Hayır', yas: '150-200 yıl', lat: 40.938, lng: 31.731 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 40.939, lng: 31.727 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 40.940, lng: 31.723 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 40.941, lng: 31.719 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 40.942, lng: 31.715 }
+            { name: 'Kayın', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.938, lng: 31.731 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.939, lng: 31.727 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.940, lng: 31.723 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.941, lng: 31.719 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.942, lng: 31.715 }
         ],
         'Munzur Dağları Ormanları': [
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 39.085, lng: 39.533 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 39.086, lng: 39.529 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 39.087, lng: 39.525 },
-            { name: 'Kayın', kesilebilir: 'Hayır', yas: '150-200 yıl', lat: 39.088, lng: 39.521 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 39.089, lng: 39.517 }
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.085, lng: 39.533 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.086, lng: 39.529 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.087, lng: 39.525 },
+            { name: 'Kayın', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.088, lng: 39.521 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.089, lng: 39.517 }
         ],
         'Bingöl Dağları Ormanları': [
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 39.043, lng: 40.587 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 39.044, lng: 40.483 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 39.045, lng: 40.479 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 39.046, lng: 40.475 },
-            { name: 'Fıstık Çamı', kesilebilir: 'Hayır', yas: '80-150 yıl', lat: 39.047, lng: 40.471 },
-            { name: 'Ardıç', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 39.048, lng: 40.467 }
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.043, lng: 40.587 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.044, lng: 40.483 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.045, lng: 40.479 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.046, lng: 40.475 },
+            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.047, lng: 40.471 },
+            { name: 'Ardıç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560,  lat: 39.048, lng: 40.467 }
         ],
         'Palandöken Dağları Ormanları': [
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 39.889, lng: 41.274},
-            { name: 'Kızılçam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 39.890, lng: 41.270 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 39.891, lng: 41.266 },
-            { name: 'Sedir', kesilebilir: 'Hayır', yas: '100-200 yıl', lat: 39.892, lng: 41.262 },
-            { name: 'Ardıç', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 39.893, lng: 41.258 },
-            { name: 'Gürgen', kesilebilir: 'Hayır', yas: '80-100 yıl', lat: 39.894, lng: 41.254 }
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.889, lng: 41.274},
+            { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.890, lng: 41.270 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.891, lng: 41.266 },
+            { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.892, lng: 41.262 },
+            { name: 'Ardıç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.893, lng: 41.258 },
+            { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.894, lng: 41.254 }
         ],
         'Dicle Ormanları': [
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 37.915, lng: 40.236 },
-            { name: 'Zeytin', kesilebilir: 'Hayır', yas: '200-500 yıl', lat: 37.916, lng: 40.232 },
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 37.917, lng: 40.228 },
-            { name: 'Akasya', kesilebilir: 'Evet', yas: '30-50 yıl', lat: 37.918, lng: 40.224 },
-            { name: 'Çınar', kesilebilir: 'Hayır', yas: '200-300 yıl', lat: 37.919, lng: 40.220 },
-            { name: 'Ardıç', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 37.920, lng: 40.216 }
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.915, lng: 40.236 },
+            { name: 'Zeytin', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.916, lng: 40.232 },
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.917, lng: 40.228 },
+            { name: 'Akasya', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.918, lng: 40.224 },
+            { name: 'Çınar', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.919, lng: 40.220 },
+            { name: 'Ardıç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.920, lng: 40.216 }
         ],
         'Birecik Ormanları': [
-            { name: 'Akasya', kesilebilir: 'Evet', yas: '30-50 yıl', lat: 37.035, lng: 37.974 },
-            { name: 'Çam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 37.036, lng: 37.970 },
-            { name: 'Zeytin', kesilebilir: 'Hayır', yas: '200-500 yıl', lat: 37.037, lng: 37.966 },
-            { name: 'Ardıç', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 37.038, lng: 37.962 },
-            { name: 'Meşe', kesilebilir: 'Evet', yas: '70-120 yıl', lat: 37.039, lng: 37.958 },
-            { name: 'Kayın', kesilebilir: 'Hayır', yas: '150-200 yıl', lat: 37.040, lng: 37.954 }
+            { name: 'Akasya', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.035, lng: 37.974 },
+            { name: 'Çam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.036, lng: 37.970 },
+            { name: 'Zeytin', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.037, lng: 37.966 },
+            { name: 'Ardıç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.038, lng: 37.962 },
+            { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.039, lng: 37.958 },
+            { name: 'Kayın', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.040, lng: 37.954 }
         ],
         'Karacadağ Ormanları': [
-            { name: 'Karaçam', kesilebilir: 'Evet', yas: '60-120 yıl', lat: 37.473, lng: 39.793 },
-            { name: 'Zeytin', kesilebilir: 'Hayır', yas: '200-500 yıl', lat: 37.474, lng: 39.789 },
-            { name: 'Akasya', kesilebilir: 'Evet', yas: '30-50 yıl', lat: 37.475, lng: 39.785 },
-            { name: 'Çam', kesilebilir: 'Evet', yas: '50-100 yıl', lat: 37.476, lng: 39.781 },
-            { name: 'Ardıç', kesilebilir: 'Hayır', yas: '150-300 yıl', lat: 37.477, lng: 39.777 }
+            { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.473, lng: 39.793 },
+            { name: 'Zeytin', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.474, lng: 39.789 },
+            { name: 'Akasya', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.475, lng: 39.785 },
+            { name: 'Çam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.476, lng: 39.781 },
+            { name: 'Ardıç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.477, lng: 39.777 }
         ]
         // Diğer ormanları buraya ekleyerek yaparsın
     };
@@ -258,15 +447,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (forests[regionName]) {
             // Ormanları büyükten küçüğe sırala
-            const sortedForests = forests[regionName].sort((a, b) => b.area - a.area);
+            const sortedForests = forests[regionName].sort((a, b) => b.totalTrees - a.totalTrees);
 
             // Bilgi paneli içeriği
             let content = `<h4>${regionName} Bölgesi Ormanları</h4><ul>`;
             sortedForests.forEach(forest => {
                 content += `
                 <li>
-                    <b>${forest.name}</b> - Alan: ${forest.area} km²
-                </li>
+                <b>${forest.name}</b><br>
+                Toplam Ağaç Sayısı: ${forest.totalTrees}<br>
+                Damgalı Ağaç Sayısı: ${forest.markedTrees}<br>
+                Damgalanacak Ağaç Sayısı: ${forest.toBeMarkedTrees}<br>
+                Kesilecek Ağaç Sayısı: ${forest.toBeCutTrees}<br>
+                Kesilemez Ağaç Sayısı: ${forest.nonCuttableTrees}
+            </li>
             `;
             });
             content += '</ul>';
@@ -278,21 +472,43 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTreesInfo(forestName) {
         const infoContent = document.getElementById('info-content');
 
-        if (trees[forestName]) {
-            // Bilgi paneli içeriği
-            let content = `<h4>${forestName}</h4><ul>`;
+        let forestFound = null;
+
+        for (const region in forests) {
+            const forest = forests[region].find(forest => forest.name === forestName);
+            if (forest) {
+                forestFound = forest;
+                break;
+            }
+        }
+
+        if (trees[forestName] && forestFound) {
+            let content = `
+        <h4>${forestName}</h4>
+        <p><b>Toplam Ağaç Sayısı:</b> ${forestFound.totalTrees}</p>
+        <p><b>Damgalı Ağaç Sayısı:</b> ${forestFound.markedTrees}</p>
+        <p><b>Damgalanacak Ağaç Sayısı:</b> ${forestFound.toBeMarkedTrees}</p>
+        <p><b>Kesilecek Ağaç Sayısı:</b> ${forestFound.toBeCutTrees}</p>
+        <p><b>Kesilemez Ağaç Sayısı:</b> ${forestFound.nonCuttableTrees}</p>
+        <p><b>Koordinatlar:</b> (${forestFound.lat}, ${forestFound.lng})</p>
+        <hr>
+        <h4>${forestName} Ağaçları</h4>
+        <ul>`;
+
             trees[forestName].forEach(tree => {
                 content += `
-                <li>
-                    <b>${tree.name}</b><br>
-                    Kesilebilir: ${tree.kesilebilir ? 'Evet' : 'Hayır'}<br>
-                    Yaş: ${tree.yas || 'Bilinmiyor'}
-                </li>
-            `;
+            <li>
+                <b>${tree.name}</b><br>
+                Toplam Ağaç Sayısı: ${tree.totalTrees}<br>
+                Damgalı Ağaç Sayısı: ${tree.markedTrees}<br>
+                Damgalanacak Ağaç Sayısı: ${tree.toBeMarkedTrees}<br>
+                Kesilecek Ağaç Sayısı: ${tree.toBeCutTrees}<br>
+                Kesilemez Ağaç Sayısı: ${tree.nonCuttableTrees}
+            </li>`;
             });
             content += '</ul>';
             infoContent.innerHTML = content;
-        } else {
+        }else {
             infoContent.innerHTML = `<p>${forestName} için ağaç bilgisi bulunamadı.</p>`;
         }
     }
@@ -300,8 +516,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const infoContent = document.getElementById('info-content');
         infoContent.innerHTML = `
         <h4>${tree.name}</h4>
-        <p><b>Kesilebilir:</b> ${tree.kesilebilir ? 'Evet' : 'Hayır'}</p>
-        <p><b>Yaş:</b> ${tree.yas || 'Bilinmiyor'}</p>
+        <p><b>Toplam Ağaç Sayısı:</b> ${tree.totalTrees}</p>
+        <p><b>Damgalı Ağaç Sayısı:</b> ${tree.markedTrees}</p>
+        <p><b>Damgalanacak Ağaç Sayısı:</b> ${tree.toBeMarkedTrees}</p>
+        <p><b>Kesilecek Ağaç Sayısı:</b> ${tree.toBeCutTrees}</p>
+        <p><b>Kesilemez Ağaç Sayısı:</b> ${tree.nonCuttableTrees}</p>
+        <p><b>Koordinatlar:</b> (${tree.lat}, ${tree.lng})</p>
     `;
     }
 });
@@ -360,4 +580,40 @@ marker.on('click', () => {
             window.forestMarkers.push(forestMarker);
         });
     }
+    document.getElementById('region-select').addEventListener('change', function () {
+        const selectedRegion = this.value;
+
+        if (selectedRegion) {
+            // Focus map on selected region
+            const region = forests[selectedRegion];
+            if (region) {
+                const { lat, lng } = region[0]; // Take the first forest in the region for example
+                map.setView([lat, lng], 8); // Adjust zoom level as needed
+
+                // Clear existing markers
+                if (window.forestMarkers) {
+                    window.forestMarkers.forEach(marker => map.removeLayer(marker));
+                }
+
+                // Add forest markers for the selected region
+                window.forestMarkers = [];
+                region.forEach(forest => {
+                    const marker = L.marker([forest.lat, forest.lng]).addTo(map);
+                    marker.bindPopup(`<b>${forest.name}</b>`);
+
+                    marker.on('click', () => {
+                        // Display tree info for the forest
+                        updateTreesInfo(forest.name);
+                    });
+
+                    window.forestMarkers.push(marker);
+                });
+
+                // Update forest details in the panel
+                updateForestsInfo(selectedRegion);
+            } else {
+                alert('Seçilen bölgede veri bulunamadı.');
+            }
+        }
+    });
 });

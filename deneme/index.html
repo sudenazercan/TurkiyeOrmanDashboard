@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css">
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <!-- Leaflet Awesome Markers CSS -->
@@ -31,6 +33,26 @@
   <!-- Bilgi Paneli -->
   <div class="info-panel">
     <h2>Bilgi Paneli</h2>
+    <div class="search-container">
+      <div class="input-group">
+        <span class="input-group-text">
+            <i class="fa fa-search " style="font-size: 8px"></i> <!-- Search Icon -->
+        </span>
+        <input type="text" class="form-control" placeholder="Ara">
+      </div>
+      <select id="region-select" class="form-select">
+        <option value="">Bölge Seçiniz</option>
+        <option value="Marmara">Marmara</option>
+        <option value="Karadeniz">Karadeniz</option>
+        <option value="Ege">Ege</option>
+        <option value="Akdeniz">Akdeniz</option>
+        <option value="Güneydoğu Anadolu">Güneydogu Anadolu</option>
+        <option value="Doğu Anadolu">Dogu Anadolu</option>
+        <option value="İç Anadolu">Ic Anadolu</option>
+        <!-- Add other regions -->
+      </select>
+      <button id="search-button" class="btn btn-primary">Ara</button>
+    </div>
     <div id="info-content">
       <p><strong>Türkiye’nin farklı bölgelerindeki ormanlar hakkında bilgi almak için haritada bir bölge seçin.</strong></p>
       <ul>
