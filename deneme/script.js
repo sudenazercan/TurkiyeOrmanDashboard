@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Kaz Dağları Ormanı': [
             { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.679, lng: 26.743 },
             { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.680, lng: 26.739 },
-            { name: 'Kazdağı Göknarı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.681, lng: 26.735 },
+            { name: 'KazdağıGöknarı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.681, lng: 26.735 },
             { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.682, lng: 26.731 },
             { name: 'Çınar', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.683, lng: 26.727 }
         ],
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.030, lng: 32.336 },
             { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.031, lng: 32.332 },
             { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.032, lng: 32.328 },
-            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.033, lng: 32.324 }
+            { name: 'FıstıkÇamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.033, lng: 32.324 }
         ],
         'Köprülü Kanyon Ormanları': [
             { name: 'Kızılçam', totalTrees:3000, kesilebilir: 'Evet', toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 37.225, lng: 31.236 },
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'Kızılçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.786, lng: 31.132 },
             { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.787, lng: 31.128 },
             { name: 'Akasya', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.788, lng: 31.124 },
-            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.789, lng: 31.120 }
+            { name: 'FıstıkÇamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.789, lng: 31.120 }
         ],
         'Türkmen Dağı Ormanları': [
             { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 38.707, lng: 31.923 },
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'Karaçam', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.839, lng: 33.468 },
             { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.840, lng: 33.464 },
             { name: 'Ladin', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.841, lng: 33.460 },
-            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.842, lng: 33.456 }
+            { name: 'FıstıkÇamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 41.842, lng: 33.456 }
         ],
         'Kaçkar Dağları Ormanları': [
             { name: 'Ladin', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 40.911, lng: 41.231 },
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'Meşe', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.044, lng: 40.483 },
             { name: 'Gürgen', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.045, lng: 40.479 },
             { name: 'Sedir', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.046, lng: 40.475 },
-            { name: 'Fıstık Çamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.047, lng: 40.471 },
+            { name: 'FıstıkÇamı', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560, lat: 39.047, lng: 40.471 },
             { name: 'Ardıç', totalTrees:3000, markedTrees: 1500, toBeMarkedTrees: 1200, toBeCutTrees: 400, nonCuttableTrees: 560,  lat: 39.048, lng: 40.467 }
         ],
         'Palandöken Dağları Ormanları': [
@@ -496,8 +496,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <ul>`;
 
             trees[forestName].forEach(tree => {
+                const iconPath = `./icons/${tree.name}.png`;
                 content += `
             <li>
+                <img src="${iconPath}" alt="${tree.name} Icon" 
+                     style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;">
                 <b>${tree.name}</b><br>
                 Toplam Ağaç Sayısı: ${tree.totalTrees}<br>
                 Damgalı Ağaç Sayısı: ${tree.markedTrees}<br>
